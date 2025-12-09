@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/coding work/project/mlruns/0/3e693963b4a24b59b65401d3126cc918/artifacts
+end_time: 1765267892946
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3e693963b4a24b59b65401d3126cc918
+run_name: defiant-stoat-183
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1765267892939
+status: 3
+tags: []
+user_id: jatinkher

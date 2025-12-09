@@ -1,6 +1,7 @@
 import os
 import sys
 from dataclasses import dataclass
+from dotenv import load_dotenv
 import mlflow
 import mlflow.sklearn
 import numpy as np
@@ -118,7 +119,12 @@ class ModelTrainer:
 
             best_params = params[actual_model]
 
-            # MLflow logging to DagsHub
+            # Load environment variables
+            load_dotenv()
+            
+            # MLflow logging to DagsHub with authentication
+            os.environ['MLFLOW_TRACKING_USERNAME'] = 'Jatin-Kher'
+            os.environ['MLFLOW_TRACKING_PASSWORD'] = os.getenv('DAGSHUB_TOKEN', 'your_dagshub_token_here')
             mlflow.set_tracking_uri("https://dagshub.com/Jatin-Kher/ML_Project.mlflow")
             
             with mlflow.start_run():
